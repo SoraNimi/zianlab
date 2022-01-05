@@ -2,16 +2,6 @@ import numpy as np
 
 #neuron = np.sign(np.load('layer0_neuron0.npy'))
 #neuron = np.random.randint(2,size=1024)
-Rl1 = np.random.normal(0, 90, 401408)
-Rh1= np.random.normal(0, 90, 401408)
-Rl2 = np.random.normal(0, 90, 301408)
-Rh2= np.random.normal(0, 90, 301408)
-Rl3 = np.random.normal(0, 90, 301408)
-Rh3= np.random.normal(0, 90, 301408)
-Rl4 = np.random.normal(0, 90, 6000)
-Rh4= np.random.normal(0, 90, 6000)
-Rd1= np.random.normal(0, 90, 1300)
-Rd2= np.random.normal(0, 90, 1300)
 weight = np.load('weight_retrain15.npy',allow_pickle=True,encoding="latin1")
 #weight = np.load('weight_512.npy',allow_pickle=True,encoding="latin1")
 neuron = []
@@ -34,7 +24,7 @@ layer0_shape = neuron[0].shape
 layer1_shape = neuron[2].shape
 layer2_shape = neuron[4].shape
 layer3_shape = neuron[6].shape
-output_file = open("dnn512retrain30.sp","w")
+output_file = open("dnnExample.sp","w")
 #output_file = open("dnn_test.sp","w")
 print(neuron[6].shape)
 header_file = open("module_header.sp", "r")
@@ -61,7 +51,7 @@ for i in range(1600):
 for j in range(0,layer0_shape[1]):
     for i in range(0,layer0_shape[0]):
         output_file.write("xl0b%dc%d l0bl%d vdd x%s x%sb CELLD r1=%se3 r0=%se3\n"
-                          %(j,i,j,i,i,((10000+Rh1[j*28+i]) if neuron[0][i][j]==1 else (900+Rl1[j*28+i])),((900+Rl1[j*28+i]) if neuron[0][i][j]==1 else (10000+Rh1[j*28+i]))))
+                          %(j,i,j,i,i,((10000) if neuron[0][i][j]==1 else (900)),((900) if neuron[0][i][j]==1 else (10000))))
 
 
 output_file.write('\n')
@@ -78,7 +68,7 @@ output_file.write('\n\n\n')
 
 for j in range(0,layer1_shape[1]):
     for i in range(0,layer1_shape[0]):
-        output_file.write("xl1b%dc%d l1bl%d vdd l0dl%s l0dl%sb CELLD r1=%se3 r0=%se3\n" %(j,i,j,i,i,((10000+Rh2[j*28+i]) if neuron[2][i][j]==1 else (900+Rl2[j*28+i])),((900+Rl2[j*28+i]) if neuron[2][i][j]==1 else (10000+Rh2[j*28+i]))))
+        output_file.write("xl1b%dc%d l1bl%d vdd l0dl%s l0dl%sb CELLD r1=%se3 r0=%se3\n" %(j,i,j,i,i,((10000) if neuron[2][i][j]==1 else (900)),((900) if neuron[2][i][j]==1 else (10000))))
 
 
 output_file.write('\n')
@@ -94,7 +84,7 @@ output_file.write('\n\n\n')
 
 for j in range(0,layer2_shape[1]):
     for i in range(0,layer2_shape[0]):
-        output_file.write("xl2b%dc%d l2bl%d vdd l1dl%d l1dl%db CELLD r1=%se3 r0=%se3\n" %(j,i,j,i,i,((10000+Rh3[j*28+i]) if neuron[4][i][j]==1 else (900+Rl3[j*28+i])),((900+Rl3[j*28+i]) if neuron[4][i][j]==1 else (10000+Rh3[j*28+i]))))
+        output_file.write("xl2b%dc%d l2bl%d vdd l1dl%d l1dl%db CELLD r1=%se3 r0=%se3\n" %(j,i,j,i,i,((10000) if neuron[4][i][j]==1 else (900)),((900) if neuron[4][i][j]==1 else (10000))))
 
 
 output_file.write('\n')
@@ -110,7 +100,7 @@ output_file.write('\n\n\n')
 
 for j in range(0,layer3_shape[1]):
     for i in range(0,layer3_shape[0]):
-        output_file.write("xl3b%dc%d l3bl%d vdd l2dl%d l2dl%db CELLD r1=%se3 r0=%se3\n" %(j,i,j,i,i,((10000+Rh4[j*28+i]) if neuron[6][i][j]==1 else (900+Rl4[j*28+i])),((900+Rl4[j*28+i]) if neuron[6][i][j]==1 else (10000+Rh4[j*28+i]))))
+        output_file.write("xl3b%dc%d l3bl%d vdd l2dl%d l2dl%db CELLD r1=%se3 r0=%se3\n" %(j,i,j,i,i,((10000) if neuron[6][i][j]==1 else (900)),((900) if neuron[6][i][j]==1 else (10000))))
 
 
 output_file.write('\n')
@@ -127,7 +117,7 @@ output_file.write('\n')
 #output_file.write('xbdc0 bld vdd vref vrefb CELLDREF\n')
 
 for i in range(1,bld_len):
-    output_file.write("xbdc%d bld vdd vref vrefb CELLD r1=%se3 r0=%se3\n" %(i,((10000+Rd1[i]) if i%2==0 else (900+Rd2[i])),((900+Rd2[i]) if i%2==0 else (10000+Rd1[i]))))
+    output_file.write("xbdc%d bld vdd vref vrefb CELLD r1=%se3 r0=%se3\n" %(i,((10000) if i%2==0 else (900)),((900) if i%2==0 else (10000))))
 output_file.write("rbldr bld 0 blresistor\n")
 
 #for i in range(1,68):
@@ -138,7 +128,7 @@ output_file.write("rbldr bld 0 blresistor\n")
 
 #output_file.write('xbdinc0 bldin vdd vref vrefb CELLDREF\n')
 for i in range(1,input_len):
-    output_file.write("xbdinc%d bldin vdd vref vrefb CELLD r1=%se3 r0=%se3\n" %(i,((10000+Rd1[i+500]) if i%2==0 else (900+Rd2[i+500])),((900+Rd2[i+500]) if i%2==0 else (10000+Rd1[i+500]))))
+    output_file.write("xbdinc%d bldin vdd vref vrefb CELLD r1=%se3 r0=%se3\n" %(i,((10000) if i%2==0 else (900)),((900) if i%2==0 else (10000))))
 output_file.write("rbldinr bldin 0 blinresistor\n")
 
 output_file.write('\n')
