@@ -233,7 +233,7 @@ print('Test accuracy:', score[1])
 #print('Test accuracy:', score[1])
 #(a1[0])
 ################save weight########################################################
-model.save_weights('m512retrain30mv.h5')
+model.save_weights('weight_insitu-20mv.h5')
 #model.save_weights('m512retrain15nol.h5')
 #model.save('m512xinco-5mv.h5')
 #weights_list = model.get_weights()
@@ -243,7 +243,7 @@ model.save_weights('m512retrain30mv.h5')
 #weight4=model.get_weights()[18]
 #np.save('shiyanling10500.npy',(weight1,weight2,weight3,weight4))
 weight=model.get_weights()
-np.save('weight_retrain15.npy',weight)
+np.save('weight_insitu-20mv.npy',weight)
 ##########################################
 o0=[3,10,13,25,28,55,69,71,101,126,136]
 o1=[2,5,14,29,31,37,39,40,46,51]
