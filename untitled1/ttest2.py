@@ -147,7 +147,7 @@ model.summary()
 #model.load_weights('m512retrain30mv.h5')
 #model.load_weights('m512bias0nol.h5')
 #model.load_weights('m512retrain30mv.h5')
-model.load_weights('m512xinco-20mv.h5')
+model.load_weights('m512xinco-25mv.h5')
 
 weights_list = model.get_weights()
 result6= np.random.normal(0, 0, 512)
