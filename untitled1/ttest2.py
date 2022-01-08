@@ -8,7 +8,7 @@ import keras.backend as K
 from keras.datasets import mnist
 from keras.models import Sequential
 from keras.layers import Dense, Dropout, Layer, Activation, BatchNormalization
-from keras.optimizers import SGD, Adam, RMSprop
+from tensorflow.keras.optimizers import SGD, Adam, RMSprop
 from keras.callbacks import LearningRateScheduler
 from keras.utils import np_utils
 import keras
