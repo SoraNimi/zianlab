@@ -1,0 +1,4 @@
+$DATA1 SOURCE='FineSimPro' VERSION='L-2016.06-SP2-2'
+.TITLE '** Generated for: hspiceD'
+        avgval0        avgval1        avgval2        avgval3        avgval4        avgval5        avgval6        avgval7        avgval8        avgval9            bld          bldin          czabd         temper         alter#
+     6.5647e-01     6.3104e-01     6.2268e-01     6.3564e-01     6.4124e-01     6.0788e-01     6.1050e-01     6.1797e-01     6.4743e-01     6.2422e-01     6.2863e-01     6.3597e-01          error     2.5000e+01     1.0000e+00
