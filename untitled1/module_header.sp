@@ -1555,6 +1555,17 @@
 .PROBE tran v(l2bl510)
 .PROBE tran v(l2bl511)
 
+.PROBE tran v(l3bl0)
+.PROBE tran v(l3bl1)
+.PROBE tran v(l3bl2)
+.PROBE tran v(l3bl3)
+.PROBE tran v(l3bl4)
+.PROBE tran v(l3bl5)
+.PROBE tran v(l3bl6)
+.PROBE tran v(l3bl7)
+.PROBE tran v(l3bl8)
+.PROBE tran v(l3bl9)
+
 .measure tran avgvall0bl0 AVG v(l0bl0) FROM = 0ns TO =1ns
 .measure tran avgvall0bl1 AVG v(l0bl1) FROM = 0ns TO =1ns
 .measure tran avgvall0bl2 AVG v(l0bl2) FROM = 0ns TO =1ns
@@ -3093,18 +3104,6 @@
 .measure tran avgvall2bl509 AVG v(l2bl509) FROM = 199ns TO =200ns
 .measure tran avgvall2bl510 AVG v(l2bl510) FROM = 199ns TO =200ns
 .measure tran avgvall2bl511 AVG v(l2bl511) FROM = 199ns TO =200ns
-
-
-.PROBE tran v(l3bl0)
-.PROBE tran v(l3bl1)
-.PROBE tran v(l3bl2)
-.PROBE tran v(l3bl3)
-.PROBE tran v(l3bl4)
-.PROBE tran v(l3bl5)
-.PROBE tran v(l3bl6)
-.PROBE tran v(l3bl7)
-.PROBE tran v(l3bl8)
-.PROBE tran v(l3bl9)
 .measure tran avgval0 AVG v(l3bl0) FROM = 199ns TO =200ns
 .measure tran avgval1 AVG v(l3bl1) FROM = 199ns TO =200ns
 .measure tran avgval2 AVG v(l3bl2) FROM = 199ns TO =200ns
