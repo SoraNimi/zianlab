@@ -147,7 +147,7 @@ model.summary()
 #model.load_weights('m512retrain30mv.h5')
 #model.load_weights('m512bias0nol.h5')
 #model.load_weights('m512retrain30mv.h5')
-model.load_weights('m512xinco-30mv.h5')
+model.load_weights('m512xinco-5mv.h5')
 
 weights_list = model.get_weights()
 result6= np.random.normal(0, 0, 512)
@@ -233,7 +233,7 @@ print('Test accuracy:', score[1])
 #print('Test accuracy:', score[1])
 #(a1[0])
 ################save weight########################################################
-model.save_weights('weight_insitu-30mv.h5')
+model.save_weights('weight_insitu-5mv.h5')
 #model.save_weights('m512retrain15nol.h5')
 #model.save('m512xinco-5mv.h5')
 #weights_list = model.get_weights()
@@ -243,18 +243,212 @@ model.save_weights('weight_insitu-30mv.h5')
 #weight4=model.get_weights()[18]
 #np.save('shiyanling10500.npy',(weight1,weight2,weight3,weight4))
 weight=model.get_weights()
-np.save('weight_insitu-30mv.npy',weight)
+np.save('weight_insitu-5mv.npy',weight)
 ##########################################
-o0=[3,10,13,25,28,55,69,71,101,126,136]
-o1=[2,5,14,29,31,37,39,40,46,51]
-o2=[1,35,38,43,47,72,77,82,106,119]
-o3=[18,30,32,44,51,63,68,76,87,90]
-o4=[4,6,19,24,27,33,42,48,49,56]
-o5=[8,15,23,45,52,53,59,102,120,127]
-o6=[11,21,22,50,54,66,81,88,91,98]
-o7=[0,17,26,34,36,41,60,64,70,75]
-o8=[61,84,110,128,134,146,177,179,181,184]
-o9=[7,9,12,16,20,58,62,73,78,92]
+o0=[3
+,10
+,13
+,25
+,28
+,55
+,69
+,71
+,101
+,126
+,136
+,148
+,157
+,183
+,188
+,192
+,194
+,215
+,246
+,269]
+o1=[1004
+,1008
+,1011
+,1019
+,1025
+,1027
+,1030
+,1037
+,1038
+,1040
+,1054
+,1075
+,1083
+,1097
+,1129
+,1136
+,1137
+,1139
+,1179
+,1180
+]
+o2=[2044
+,2055
+,2058
+,2082
+,2085
+,2092
+,2098
+,2101
+,2108
+,2110
+,2112
+,2122
+,2126
+,2133
+,2138
+,2157
+,2158
+,2176
+,2184
+,2186]
+o3=[3010
+,3015
+,3045
+,3049
+,3074
+,3078
+,3080
+,3082
+,3083
+,3085
+,3094
+,3104
+,3108
+,3110
+,3120
+,3129
+,3131
+,3138
+,3146
+,3150]
+o4=[4001
+,4012
+,4017
+,4024
+,4029
+,4042
+,4046
+,4060
+,4071
+,4172
+,4192
+,4194
+,4197
+,4217
+,4221
+,4223
+,4229
+,4258
+,4265
+,4266]
+o5=[5020
+,5021
+,5056
+,5083
+,5098
+,5102
+,5111
+,5134
+,5152
+,5160
+,5170
+,5174
+,5187
+,5194
+,5196
+,5197
+,5206
+,5207
+,5222
+,5223
+]
+o6=[6002
+,6020
+,6029
+,6031
+,6033
+,6038
+,6068
+,6078
+,6088
+,6094
+,6104
+,6113
+,6122
+,6128
+,6130
+,6134
+,6167
+,6179
+,6187
+,6197
+]
+o7=[7021
+,7028
+,7030
+,7032
+,7041
+,7059
+,7069
+,7079
+,7082
+,7088
+,7098
+,7111
+,7124
+,7141
+,7144
+,7145
+,7149
+,7180
+,7189
+,7197
+]
+o8=[8009
+,8012
+,8015
+,8027
+,8037
+,8046
+,8065
+,8075
+,8097
+,8105
+,8125
+,8135
+,8145
+,8147
+,8157
+,8183
+,8209
+,8216
+,8217
+,8223]
+o9=[9023
+,9026
+,9028
+,9054
+,9057
+,9069
+,9079
+,9089
+,9093
+,9094
+,9142
+,9144
+,9153
+,9165
+,9170
+,9188
+,9198
+,9206
+,9214
+,9216]
 
 
 
@@ -271,7 +465,7 @@ o9=[7,9,12,16,20,58,62,73,78,92]
 ############middle layer output#################
 inp = model.input                                           # input placeholder
 outputs = [layer.output for layer in model.layers]          # all layer outputs
-functor = K.function([inp]+ [K.learning_phase()], outputs ) # evaluation function
+#functor = K.function([inp]+ [K.learning_phase()], outputs ) # evaluation function
 functor1 = K.function([inp], outputs )
 
 
@@ -313,7 +507,7 @@ import pickle
 
 #####################################################################################
 #print(layer_outs)
-for i in range (10):
+for i in range (20):
 ## Testing 1
     test = np.random.random(X_test[o0[i]].shape)
 ##layer_outs = functor([X_test[0], 1.]) #with dropout
@@ -321,7 +515,7 @@ for i in range (10):
     print(0)
     print(layer_outs1[10])
 
-for i in range (10):
+for i in range (20):
 ## Testing 1
     test = np.random.random(X_test[o1[i]].shape)
 ##layer_outs = functor([X_test[0], 1.]) #with dropout
@@ -330,56 +524,56 @@ for i in range (10):
 
     print(layer_outs1[10])
 
-for i in range (10):
+for i in range (20):
     test2 = np.random.random(X_test[o2[i]].shape)
 ##layer_outs = functor([X_test[0], 1.]) #with dropout
     layer_outs2 = functor1([X_test[o2[i]][np.newaxis,...], 0.]) #without dropout
     print(2)
     print(layer_outs2[10])
 
-for i in range (10):
+for i in range (20):
     test3 = np.random.random(X_test[o3[i]].shape)
 ##layer_outs = functor([X_test[0], 1.]) #with dropout
     layer_outs3 = functor1([X_test[o3[i]][np.newaxis,...], 0.]) #without dropout
     print(3)
     print(layer_outs3[10])
 
-for i in range(10):
+for i in range(20):
     test4 = np.random.random(X_test[o4[i]].shape)
 ##layer_outs = functor([X_test[0], 1.]) #with dropout
     layer_outs4 = functor1([X_test[o4[i]][np.newaxis,...], 0.]) #without dropout
     print(4)
     print(layer_outs4[10])
 
-for i in range(10):
+for i in range(20):
     test5 = np.random.random(X_test[o5[i]].shape)
 ##layer_outs = functor([X_test[0], 1.]) #with dropout
     layer_outs5 = functor1([X_test[o5[i]][np.newaxis,...], 0.]) #without dropout
     print(5)
     print(layer_outs5[10])
 
-for i in range(10):
+for i in range(20):
     test6 = np.random.random(X_test[o6[i]].shape)
 ##layer_outs = functor([X_test[0], 1.]) #with dropout
     layer_outs6 = functor1([X_test[o6[i]][np.newaxis,...], 0.]) #without dropout
     print(6)
     print(layer_outs6[10])
 
-for i in range(10):
+for i in range(20):
     test7 = np.random.random(X_test[o7[i]].shape)
 ##layer_outs = functor([X_test[0], 1.]) #with dropout
     layer_outs7 = functor1([X_test[o7[i]][np.newaxis,...], 0.]) #without dropout
     print(7)
     print(layer_outs7[10])
 
-for i in range(10):
+for i in range(20):
     test8 = np.random.random(X_test[o8[i]].shape)
 ##layer_outs = functor([X_test[0], 1.]) #with dropout
     layer_outs8 = functor1([X_test[o8[i]][np.newaxis,...], 0.]) #without dropout
     print(8)
     print(layer_outs8[10])
 
-for i in range(10):
+for i in range(20):
     test9 = np.random.random(X_test[o9[i]].shape)
 ##layer_outs = functor([X_test[0], 1.]) #with dropout
     layer_outs9 = functor1([X_test[o9[i]][np.newaxis,...], 0.]) #without dropout
