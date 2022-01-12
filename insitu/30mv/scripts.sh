@@ -7,7 +7,7 @@
 # Usage: Get the difference of the top 1 and top2.
 ######################################################a#
 Accuracy=0
-for((g=1;g<=1;g++))
+for((g=1;g<=10;g++))
 do
 for((j=1+20*g-20;j<=20+20*g-20;j++))
 do
