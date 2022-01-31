@@ -2,7 +2,7 @@ import numpy as np
 
 #neuron = np.sign(np.load('layer0_neuron0.npy'))
 #neuron = np.random.randint(2,size=1024)
-weight = np.load('weight_insitu-5mv.npy',allow_pickle=True,encoding="latin1")
+weight = np.load('weight_insitu-30mv.npy',allow_pickle=True,encoding="latin1")
 #weight = np.load('weight_512.npy',allow_pickle=True,encoding="latin1")
 neuron = []
 for i in range(len(weight)):
@@ -24,7 +24,7 @@ layer0_shape = neuron[0].shape
 layer1_shape = neuron[2].shape
 layer2_shape = neuron[4].shape
 layer3_shape = neuron[6].shape
-output_file = open("dnn_insitu_5mv.sp","w")
+output_file = open("dnn_insitu_30mv.sp","w")
 #output_file = open("dnn_test.sp","w")
 print(neuron[6].shape)
 header_file = open("module_header.sp", "r")
