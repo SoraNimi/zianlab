@@ -26,6 +26,9 @@ layer2_shape = neuron[4].shape
 layer3_shape = neuron[6].shape
 output_file = open("dnn_insitu_30mv.sp","w")
 #output_file = open("dnn_test.sp","w")
+print(neuron[0].shape)
+print(neuron[2].shape)
+print(neuron[4].shape)
 print(neuron[6].shape)
 header_file = open("module_header.sp", "r")
 line = header_file.readline()
