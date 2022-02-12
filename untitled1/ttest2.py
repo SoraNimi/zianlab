@@ -147,7 +147,7 @@ model.summary()
 #model.load_weights('m512retrain30mv.h5')
 #model.load_weights('m512bias0nol.h5')
 #model.load_weights('m512retrain30mv.h5')
-model.load_weights('m512xinco-30mv.h5')
+model.load_weights('m512xinco-25mv.h5')
 
 weights_list = model.get_weights()
 result6= np.random.normal(0, 0, 512)
@@ -233,7 +233,7 @@ print('Test accuracy:', score[1])
 #print('Test accuracy:', score[1])
 #(a1[0])
 ################save weight########################################################
-model.save_weights('weight_insitu-30mv.h5')
+model.save_weights('weight_insitu-25mv.h5')
 #model.save_weights('m512retrain15nol.h5')
 #model.save('m512xinco-5mv.h5')
 #weights_list = model.get_weights()
@@ -243,7 +243,7 @@ model.save_weights('weight_insitu-30mv.h5')
 #weight4=model.get_weights()[18]
 #np.save('shiyanling10500.npy',(weight1,weight2,weight3,weight4))
 weight=model.get_weights()
-np.save('weight_insitu-30mv.npy',weight)
+np.save('weight_insitu-25mv.npy',weight)
 ##########################################
 o0=[3
 ,10
