@@ -8,7 +8,7 @@
 
 .param milkjelly = 0
 
-.Dc milkjelly 0.5 1 0.001
+.Dc milkjelly 0.5 1 0.1
 
 .TEMP 25.0
 .OPTION
