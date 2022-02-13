@@ -32,7 +32,7 @@ for i in range(3200):
     if array[i]>=0:
         output_file.write("+ VTH0 = 'delvtn + 0.4624 + %s '\n" %(0.01))
     if array[i]<0:
-        output_file.write("+ VTH0 = 'delvtn + 0.4624 %s '\n" % (0.01))
+        output_file.write("+ VTH0 = 'delvtn + 0.4624 + %s '\n" % (0.01))
 
     header_file = open("bu40n2.mdl", "r")
     line = header_file.readline()
