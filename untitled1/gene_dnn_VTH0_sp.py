@@ -58,7 +58,7 @@ for j in range(0,layer0_shape[1]):
 
 
 output_file.write('\n')
-for i in range(0,1):
+for i in range(0,2):
     output_file.write("rl0bl%dr milkjelly 0 blinresistor\n" %(i))
     #output_file.write("xl0sa%d l0bl%d bldin l0sa%da vdd SAVM%d\n" %(i,i,i,i+2))
     output_file.write("xl0sa%d milkjelly bldin l0sa%da vdd SAVM%d\n" % (i, i, i + 2))
