@@ -6,9 +6,11 @@
 .PARAM blinresistor=2000
 .PARAM blresistor=3000
 
-.param milkjelly = 0
+.param senaan = 0
 
-.Dc milkjelly 0.5 1 0.1
+.DC senaan 0.5 1 0.1
+
+Vmilkjelly milkjelly 0 DC senaan
 
 .TEMP 25.0
 .OPTION
