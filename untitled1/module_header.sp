@@ -23,6 +23,7 @@ Vmilkjelly milkjelly 0 DC senaan
 .PROBE v(l0bl0)
 .PROBE DC v(l0dl0)
 .PROBE DC v(l0dl0b)
+.PROBE tran v(bldin)
 .measure  vall0bl0  v(l0bl0)
 .measure DC  l0dl0  v(l0dl0)
 .measure DC l0dl0b  v(l0dl0b)
