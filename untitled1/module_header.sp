@@ -20,14 +20,13 @@ Vmilkjelly milkjelly 0 DC senaan
 +    PSF=2
 .OPTION PROBE=1
 
-.PROBE  v(l0bl0)
-.PROBE v(l0dl0)
-.PROBE v(l0dl0b)
-.PROBE v(bldin)
-.measure  vall0bl0  v(l0bl0) 
-.measure  l0dl0  v(l0dl0)
-.measure  l0dl0b  v(l0dl0b)
-.measure  bldin  v(bldin)
+.PROBE v(l0bl0)
+.PROBE DC v(l0dl0)
+.PROBE DC v(l0dl0b)
+.measure  vall0bl0  v(l0bl0)
+.measure DC  l0dl0  v(l0dl0)
+.measure DC l0dl0b  v(l0dl0b)
+.measure tran bldin v(bldin)
 
 .INCLUDE "/home/user68/design/rules/rohm180/spice/hspice/bu40n1.mdl"
 .INCLUDE "/home/user68/DNN/insitu-training/30mv/bu40n3-vth.mdl"
