@@ -56,7 +56,7 @@ Vvin- vin- 0 DC 0.9
 Vg g 0 DC 0
 Vvref vref 0 DC 0.9 
 Vvh vh 0 DC 1.8
-
+.PROBE DC v(vout)
 .measure DC vout v(vout)
 
 .include "/home/user68/design/rules/rohm180/spice/hspice/bu40n1.mdl"
