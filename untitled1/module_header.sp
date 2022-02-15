@@ -6,7 +6,7 @@
 .PARAM blinresistor=2000
 .PARAM blresistor=3000
 
-.DC Vvin+ 0 1.8 0.1
+.DC Vvin+ 0.60 0.01 0.65
 Vvin+ vin+ 0 DC
 
 .TEMP 25.0
