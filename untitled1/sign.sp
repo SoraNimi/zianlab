@@ -40,9 +40,9 @@ vbldin bldin 0 PWL
 +    200n    0.6626
 
 
-.INCLUDE "/home/user34/design/rules/rohm180/spice/hspice/bu40n1.mdl"
-.LIB "/home/user34/design/rules/rohm180/spice/hspice/bu40n1.skw" NT
-.LIB "/home/user34/design/rules/rohm180/spice/hspice/bu40n1.skw" PT
+.INCLUDE "/home/user68/design/rules/rohm180/spice/hspice/bu40n1.mdl"
+.LIB "/home/user68/design/rules/rohm180/spice/hspice/bu40n1.skw" NT
+.LIB "/home/user68/design/rules/rohm180/spice/hspice/bu40n1.skw" PT
 
 
 ** Library name: reram
