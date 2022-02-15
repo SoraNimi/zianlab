@@ -58,8 +58,8 @@ Vvref vref 0 DC 0.9
 Vvh vh 0 DC 1.8
 
 
-.include "/home/user17/design/rules/rohm180/spice/hspice/bu40n1.mdl"
-.lib "/home/user17/design/rules/rohm180/spice/hspice/bu40n1.skw" NT
-.lib "/home/user17/design/rules/rohm180/spice/hspice/bu40n1.skw" PT
+.include "/home/user68/design/rules/rohm180/spice/hspice/bu40n1.mdl"
+.lib "/home/user68/design/rules/rohm180/spice/hspice/bu40n1.skw" NT
+.lib "/home/user68/design/rules/rohm180/spice/hspice/bu40n1.skw" PT
 
 .END
