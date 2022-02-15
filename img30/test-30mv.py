@@ -13,7 +13,7 @@ def deal(listStr, i):
     df = pd.DataFrame(listStr, columns=[column])
 
     # 保存到本地excel
-    IndexFile = 'insitu-30mv-Layer0-Test0'+'.xlsx'
+    IndexFile = 'offline-30mv-Layer2-Test6'+'.xlsx'
     df.to_excel(IndexFile, index=False)
 
 
@@ -28,30 +28,30 @@ if __name__ == '__main__':
         data = strAfter.split(',')
         print(data)
         datalist = data[1:2]
-        #datalist = data[2:3]
-        #datalist = data[3:4]
-        #datalist = data[4:5]
-        #datalist = data[5:6]
-        #datalist = data[6:7]
-        #datalist = data[7:8]
+        datalist = data[2:3]
+        datalist = data[3:4]
+        datalist = data[4:5]
+        datalist = data[5:6]
+        datalist = data[6:7]
+        datalist = data[7:8]
         #datalist = data[1:513]
 
-        # datalist = data[513:514]
-        # datalist = data[514:515]
-        # datalist = data[515:516]
-        # datalist = data[516:517]
-        # datalist = data[517:518]
-        # datalist = data[518:519]
-        # datalist = data[519:520]
+        datalist = data[513:514]
+        datalist = data[514:515]
+        datalist = data[515:516]
+        datalist = data[516:517]
+        datalist = data[517:518]
+        datalist = data[518:519]
+        datalist = data[519:520]
 
 
-        #datalist = data[1025:1026]
-        #datalist = data[1026:1027]
-        #datalist = data[1027:1028]
-        #datalist = data[1028:1029]
-        #datalist = data[1029:1030]
-        #datalist = data[1030:1031]
-        #datalist = data[1031:1032]
+        datalist = data[1025:1026]
+        datalist = data[1026:1027]
+        datalist = data[1027:1028]
+        datalist = data[1028:1029]
+        datalist = data[1029:1030]
+        datalist = data[1030:1031]
+        datalist = data[1031:1032]
 
 
 
