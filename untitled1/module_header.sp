@@ -30,7 +30,7 @@ Vmilkjelly milkjelly 0 DC senaan
 .measure  vall0bl0  v(l0bl0)
 .measure DC  l0dl0  v(l0dl0)
 .measure DC l0dl0b  v(l0dl0b)
-.measure DC bldin v(bldin)
+.measure DC bldin v(bldin) when milkjelly = 0.6
 .measure DC milkjelly v(milkjelly)
 .measure DC l0sa0a v(l0sa0a)
 
