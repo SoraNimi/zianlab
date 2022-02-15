@@ -20,16 +20,16 @@ Vvin+ vin+ 0 DC
 .PROBE v(l0bl0)
 .PROBE DC v(l0dl0)
 .PROBE DC v(l0dl0b)
-.PROBE DC v(milkjelly)
+.PROBE DC v(xl0sa0inva)
 .PROBE DC v(l0sa0a)
-.PROBE DC v(bldin)
+.PROBE DC v(xl0sa0invb)
 
 .measure DC vall0bl0  v(l0bl0)
 .measure DC  l0dl0  v(l0dl0)
 .measure DC l0dl0b  v(l0dl0b)
 .measure DC bldin v(bldin)
-.measure DC milkjelly v(milkjelly)
-.measure DC l0sa0a v(l0sa0a)
+.measure DC milkjelly v(xl0sa0inva)
+.measure DC l0sa0a v(xl0sa0invb)
 
 .INCLUDE "/home/user68/design/rules/rohm180/spice/hspice/bu40n1.mdl"
 .INCLUDE "/home/user68/DNN/insitu-training/30mv/bu40n3-vth.mdl"
