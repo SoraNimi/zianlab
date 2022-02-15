@@ -61,7 +61,7 @@ output_file.write('\n')
 for i in range(0,2):
     output_file.write("rl0bl%dr milkjelly 0 blinresistor\n" %(i))
     #output_file.write("xl0sa%d l0bl%d bldin l0sa%da vdd SAVM%d\n" %(i,i,i,i+2))
-    output_file.write("xl0sa%d milkjelly bldin l0sa%da vdd SAVM%d\n" % (i, i, i + 2))
+    output_file.write("xl0sa%d milkjelly milkjelly l0sa%da vdd SAVM%d\n" % (i, i, i + 2))
     output_file.write("xl0sa%dinva 0 l0sa%da l0sa%db vdd INV1\n" % (i, i, i))
     output_file.write("xl0sa%dinvb 0 l0sa%db l0dl%d vdd INV1\n" %(i,i,i))
     output_file.write("xl0dl%dinv 0 l0dl%d l0dl%db vdd INV1\n" %(i,i,i))
