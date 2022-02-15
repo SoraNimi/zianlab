@@ -6,11 +6,8 @@
 .PARAM blinresistor=2000
 .PARAM blresistor=3000
 
-.param senaan = 0
-
-.DC senaan 0.5 1 0.1
-
-Vmilkjelly milkjelly 0 DC senaan
+.DC Vvin+ 0 1.8 0.005
+Vvin+ vin+ 0 DC
 
 .TEMP 25.0
 .OPTION
@@ -27,7 +24,7 @@ Vmilkjelly milkjelly 0 DC senaan
 .PROBE DC v(l0sa0a)
 .PROBE DC v(bldin)
 
-.measure  vall0bl0  v(l0bl0)
+.measure DC vall0bl0  v(l0bl0)
 .measure DC  l0dl0  v(l0dl0)
 .measure DC l0dl0b  v(l0dl0b)
 .measure DC bldin v(bldin)
