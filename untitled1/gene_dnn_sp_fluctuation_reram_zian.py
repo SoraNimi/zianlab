@@ -3,9 +3,11 @@ import numpy as np
 # neuron = np.sign(np.load('layer0_neuron0.npy'))
 # neuron = np.random.randint(2,size=1024)
 
-RHFlu = np.random.normal(10000, 750, 5000000)
+# 10000
+RHFlu = np.random.normal(0, 1000, 5000000)
 numRH = 0
-RLFlu = np.random.normal(900, 67.5, 5000000)
+# 900
+RLFlu = np.random.normal(0, 90, 5000000)
 numRL = 0
 
 weight = np.load('weight_insitu-30mv.npy', allow_pickle=True, encoding="latin1")
@@ -30,7 +32,7 @@ layer0_shape = neuron[0].shape
 layer1_shape = neuron[2].shape
 layer2_shape = neuron[4].shape
 layer3_shape = neuron[6].shape
-output_file = open("dnn-insitu-training-30mv-reram75.sp", "w")
+output_file = open("dnn-insitu-training-30mv-reram100.sp", "w")
 # output_file = open("dnn_test.sp","w")
 print(neuron[0].shape)
 print(neuron[2].shape)
