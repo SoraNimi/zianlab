@@ -13,7 +13,7 @@ def deal(listStr, i):
     df = pd.DataFrame(listStr, columns=[column])
 
     # 保存到本地excel
-    IndexFile = 'insitu-30mv-L2'+'.xlsx'
+    IndexFile = 'offlinetraing-30mv-L2'+'.xlsx'
     df.to_excel(IndexFile, index=False)
 
 
