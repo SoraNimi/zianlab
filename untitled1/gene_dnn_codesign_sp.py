@@ -61,7 +61,10 @@ for i in range(0,layer0_shape[1]):
     output_file.write("xl0sa%dinva 0 l0sa%da l0sa%db vdd INV1\n" % (i, i, i))
     output_file.write("xl0sa%dinvb 0 l0sa%db l0dl%d vdd INV1\n" %(i,i,i))
     output_file.write("xl0dl%dinv 0 l0dl%d l0dl%db vdd INV1\n" %(i,i,i))
-    
+
+
+
+# 从layer1开始进行改造
 
 #==================layer1=================
 output_file.write('\n\n\n')
@@ -73,6 +76,7 @@ for j in range(0,layer1_shape[1]):
 
 output_file.write('\n')
 for i in range(0, layer1_shape[1]):
+    # l1bl%d 从这里开始进行一次修改，重新构建一个SAVM链接
     output_file.write("rl1bl%dr l1bl%d 0 blresistor\n" % (i, i))
     output_file.write("xl1dl%dinv 0 l1dl%d l1dl%db vdd INV1\n" % (i, i, i))
     output_file.write("xl1sa%d l1bl%d bld l1sa%da vdd SAVM%d\n" % (i, i, i, i + 514))
