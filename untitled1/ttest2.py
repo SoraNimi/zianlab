@@ -56,7 +56,7 @@ def binary_tanh(x):
 
 batch_size = 128
 #batch_size = 12
-epochs = 200
+epochs = 6000
 #epochs = 1
 #epochs = 1
 nb_classes = 10
@@ -243,7 +243,7 @@ model.save_weights('weight_insitu-25mv.h5')
 #weight4=model.get_weights()[18]
 #np.save('shiyanling10500.npy',(weight1,weight2,weight3,weight4))
 weight=model.get_weights()
-np.save('weight_insitu-25mv.npy',weight)
+np.save('weight_co-design-30mv.npy',weight)
 ##########################################
 o0=[3
 ,10

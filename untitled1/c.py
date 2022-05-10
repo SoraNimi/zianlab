@@ -177,7 +177,7 @@ class BinaryDense1(Dense):
         binary_kernel=binarize(self.kernel, H=self.H,)
         output = K.dot(inputs, binary_kernel)
         #co = tf.random.normal(shape=[self.units], mean=0, stddev=20)
-        co = tf.random.normal(shape=[self.units], mean=0, stddev=(1 / 0.351174*0.25) * (1000 / 0.351174*0.25) * 0.03)
+        co = tf.random.normal(shape=[self.units], mean=0, stddev=(1 / 0.351174*0.25) * (1000 / 0.351174*0.25) * 0.0424)
         if self.use_bias:
             up_bias1 = (-f1 + fd1) * 1000 / 0.351174*0.25
             #up_bias1=-f1*1000/(-0.0000000004*output*output*output+0.0000006*output*output-0.0004*output+0.3094)+fd1*1000/0.3094
@@ -250,7 +250,7 @@ class BinaryDense2(Dense):
         binary_kernel=binarize(self.kernel, H=self.H,)
         output = K.dot(inputs, binary_kernel)
         #co2 = tf.random.normal(shape=[self.units], mean=0, stddev=13.4)
-        co2 = tf.random.normal(shape=[self.units], mean=0, stddev=(1 / 0.537662*0.25) * (1000 / 0.537662*0.25) * 0.03)
+        co2 = tf.random.normal(shape=[self.units], mean=0, stddev=(1 / 0.537662*0.25) * (1000 / 0.537662*0.25) * 0.0424)
         if self.use_bias:
             up_bias2 = (-f2 + fd2) * 1000 / 0.537662*0.25
             #up_bias2=-f2*1000/(-0.0000000028*output*output*output+0.0000021*output*output-0.0008*output+0.4758)+fd2*1000/0.4758
@@ -323,7 +323,7 @@ class BinaryDense3(Dense):
         binary_kernel=binarize(self.kernel, H=self.H,)
         output = K.dot(inputs, binary_kernel)
         #co3 = tf.random.normal(shape=[self.units], mean=0, stddev=13.4)
-        co3 = tf.random.normal(shape=[self.units], mean=0, stddev=(1 / 0.537662*0.25) * (1000 / 0.537662*0.25) * 0.03)
+        co3 = tf.random.normal(shape=[self.units], mean=0, stddev=(1 / 0.537662*0.25) * (1000 / 0.537662*0.25) * 0.0424)
 
         if self.use_bias:
             #up_bias3 = -f3 *1000/ (-0.0000000028*output*output*output+0.0000021*output*output-0.0008*output+0.4758)+fd3*1000/0.4758
