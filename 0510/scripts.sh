@@ -1,7 +1,7 @@
 #!/bin/bash
 ######################################################a#
 # The following is a description of the script content
-# Name: CZA
+# Name: CZA2
 # Path: /home/user26/design/bin
 # Update: 2020/10/12 22:51
 # Usage: Get the difference of the top 1 and top2.
