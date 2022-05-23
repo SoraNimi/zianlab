@@ -64,7 +64,7 @@ for i in range(0,layer0_shape[1]):
     output_file.write("xl0sa%dinva 0 l0sa%da l0sa%db vdd INV1\n" % (i, i, i))
     output_file.write("xl0sa%dinvb 0 l0sa%db l0dl%d vdd INV1\n" %(i,i,i))
     output_file.write("xl0dl%dinv 0 l0dl%d l0dl%db vdd INV1\n" %(i,i,i))
-    
+
 
 #==================layer1=================
 output_file.write('\n\n\n')
@@ -95,7 +95,7 @@ for i in range(0,layer2_shape[1]):
     output_file.write("rl2bl%dr l2bl%d 0 blresistor\n" %(i,i))
     output_file.write("xl2dl%dinv 0 l2dl%d l2dl%db vdd INV1\n" %(i,i,i))
     output_file.write("xl2sa%d l2bl%d bld l2sa%da vdd SAVM%d\n" %(i,i,i,i+1026))
-    output_file.write("xl2sa%dinvb 0 l2sa%db l2dl%d vdd INV1\n" %(i,i,i))    
+    output_file.write("xl2sa%dinvb 0 l2sa%db l2dl%d vdd INV1\n" %(i,i,i))
     output_file.write("xl2sa%dinva 0 l2sa%da l2sa%db vdd INV1\n" %(i,i,i))
 
 #==================layer3=================
@@ -111,11 +111,11 @@ for i in range(0,layer3_shape[1]):
     output_file.write("rl3bl%dr l3bl%d 0 blresistor\n" %(i,i))
     output_file.write("xl3dl%dinv 0 l3dl%d l3dl%db vdd INV1\n" %(i,i,i))
     output_file.write("xl3sa%d l3bl%d bld l3sa%da vdd SAVM%d\n" %(i,i,i,i+1538))
-    output_file.write("xl3sa%dinvb 0 l3sa%db l3dl%d vdd INV1\n" %(i,i,i))    
+    output_file.write("xl3sa%dinvb 0 l3sa%db l3dl%d vdd INV1\n" %(i,i,i))
     output_file.write("xl3sa%dinva 0 l3sa%da l3sa%db vdd INV1\n" %(i,i,i))
-  
+
 ##==================dummy bl==============
-#dummy bl cells 
+#dummy bl cells
 output_file.write('\n')
 #output_file.write('xbdc0 bld vdd vref vrefb CELLDREF\n')
 
