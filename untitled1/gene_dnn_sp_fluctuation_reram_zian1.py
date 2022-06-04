@@ -58,8 +58,8 @@ for j in range(0, layer0_shape[1]):
     for i in range(0, layer0_shape[0]):
         numRH = numRH + 1
         output_file.write("xl0b%dc%d l0bl%d vdd x%s x%sb CELLD r1=%se3 r0=%se3\n"
-                          % (j, i, j, i, i, (400 + hs[numRH] if neuron[0][i][j] == 1 else 20),
-                             (20 if neuron[0][i][j] == 1 else 400 + hs[numRH])))
+                          % (j, i, j, i, i, (hs[numRH] if neuron[0][i][j] == 1 else 20),
+                             (20 if neuron[0][i][j] == 1 else hs[numRH])))
 #    for i in range(layer0_shape[0],bld_len):
 #       output_file.write("xl0b%dc%d l0bl%d vdd vref vrefb CELLD r1=%de3 r0=%de3\n" %(j,i,j,(100 if i%2==0 else 1),(1 if i%2==0 else 10)))
 
@@ -78,7 +78,7 @@ for j in range(0, layer1_shape[1]):
     for i in range(0, layer1_shape[0]):
         numRH = numRH + 1
         output_file.write("xl1b%dc%d l1bl%d vdd l0dl%s l0dl%sb CELLD r1=%se3 r0=%se3\n" % (
-        j, i, j, i, i, (400 + hs[numRH] if neuron[2][i][j] == 1 else 20), (20 if neuron[2][i][j] == 1 else 400 + hs[numRH])))
+        j, i, j, i, i, (hs[numRH] if neuron[2][i][j] == 1 else 20), (20 if neuron[2][i][j] == 1 else hs[numRH])))
 #    for i in range(layer1_shape[0],bld_len):
 #        output_file.write("xl1b%dc%d l1bl%d vdd vref vrefb CELLD r1=%de3 r0=%de3\n" %(j,i,j,(10 if i%2==0 else 1),(1 if i%2==0 else 10)))
 
@@ -97,7 +97,7 @@ for j in range(0, layer2_shape[1]):
     for i in range(0, layer2_shape[0]):
         numRH = numRH + 1
         output_file.write("xl2b%dc%d l2bl%d vdd l1dl%d l1dl%db CELLD r1=%se3 r0=%se3\n" % (
-        j, i, j, i, i, (400 + hs[numRH] if neuron[4][i][j] == 1 else 20), (20 if neuron[4][i][j] == 1 else 400 + hs[numRH])))
+        j, i, j, i, i, (hs[numRH] if neuron[4][i][j] == 1 else 20), (20 if neuron[4][i][j] == 1 else hs[numRH])))
     # for i in range(layer2_shape[0],bld_len):
     # output_file.write("xl2b%dc%d l2bl%d vdd vref vrefb CELLD r1=%de3 r0=%de3\n" %(j,i,j,(10 if i%2==0 else 1),(1 if i%2==0 else 10)))
 
@@ -116,7 +116,7 @@ for j in range(0, layer3_shape[1]):
     for i in range(0, layer3_shape[0]):
         numRH = numRH + 1
         output_file.write("xl3b%dc%d l3bl%d vdd l2dl%d l2dl%db CELLD r1=%se3 r0=%se3\n" % (
-        j, i, j, i, i, (400 + hs[numRH] if neuron[6][i][j] == 1 else 20 ), (20 if neuron[6][i][j] == 1 else 400 + hs[numRH])))
+        j, i, j, i, i, (hs[numRH] if neuron[6][i][j] == 1 else 20), (20 if neuron[6][i][j] == 1 else hs[numRH])))
 #   for i in range(layer3_shape[0],bld_len):
 #      output_file.write("xl3b%dc%d l3bl%d vdd vref vrefb CELLD r1=%de3 r0=%de3\n" %(j,i,j,(10 if i%2==0 else 1),(1 if i%2==0 else 10)))
 
@@ -136,7 +136,7 @@ output_file.write('xbdc0 bld vdd vref vrefb CELLDREF\n')
 for i in range(1, bld_len):
     numRH = numRH + 1
     output_file.write("xbdc%d bld vdd vref vrefb CELLD r1=%se3 r0=%se3\n" % (
-    i, (400 + hs[numRH] if i % 2 == 0 else 20), (20  if i % 2 == 0 else 400 + hs[numRH])))
+    i, (hs[numRH] if i % 2 == 0 else 20), (20 if i % 2 == 0 else hs[numRH])))
 output_file.write("rbldr bld 0 blresistor\n")
 
 # for i in range(1,68):
@@ -149,7 +149,7 @@ output_file.write('xbdinc0 bldin vdd vref vrefb CELLDREF\n')
 for i in range(1, input_len):
     numRH = numRH + 1
     output_file.write("xbdinc%d bldin vdd vref vrefb CELLD r1=%se3 r0=%se3\n" % (
-    i, (400 + hs[numRH] if i % 2 == 0 else 20), (20 if i % 2 == 0 else 400 + hs[numRH])))
+    i, (hs[numRH] if i % 2 == 0 else 20), (20 if i % 2 == 0 else hs[numRH])))
 output_file.write("rbldinr bldin 0 blinresistor\n")
 
 output_file.write('\n')
