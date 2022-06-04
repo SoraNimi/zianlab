@@ -1,30 +1,27 @@
+import math
+
 import numpy as np
-import scipy.stats
 import matplotlib.pyplot as plt
-X = np.linspace(0, 10, 500)
 
-std = 1
-mean = 0
-lognorm_distribution = scipy.stats.lognorm([std], loc=mean)
-lognorm_distribution_pdf = lognorm_distribution.pdf(X)
+mu, sigma = 136519, 50405  # mean and standard deviation
 
-fig, ax = plt.subplots(figsize=(8, 5))
-plt.plot(X, lognorm_distribution_pdf, label="μ=0, σ=1")
-ax.set_xticks(np.arange(min(X), max(X)))
+normal_std = np.sqrt(np.log(1 + (sigma / mu) ** 2))
+normal_mean = np.log(mu) - normal_std ** 2 / 2
+hs = np.random.lognormal(normal_mean, normal_std, 1000)
+print(hs.max())  # some finite number
+print(hs.mean())  # about 136519
+print(hs.std())  # about 50405
 
-# std = 0.5
-# mean = 0
-# lognorm_distribution = scipy.stats.lognorm([std], loc=mean)
-# lognorm_distribution_pdf = lognorm_distribution.pdf(X)
-# plt.plot(X, lognorm_distribution_pdf, label="μ=0, σ=0.5")
+#    hs = np.random.lognormal(mu, sigma, 1000) #mean, s dev , Size
 #
-# std = 1.5
-# mean = 1
-# lognorm_distribution = scipy.stats.lognorm([std], loc=mean)
-# lognorm_distribution_pdf = lognorm_distribution.pdf(X)
-# plt.plot(X, lognorm_distribution_pdf, label="μ=1, σ=1.5")
+count, bins, ignored = plt.hist(hs, 100, normed=True)
 
-plt.title("Lognormal Distribution")
-plt.legend()
-plt.show()
+x = np.linspace(min(bins), max(bins), 10000)
+pdfT = [];
+for el in range(len(x)):
+    pdfTmp = (math.exp(-(np.log(x[el]) - mu) ** 2 / (2 * sigma ** 2)))
+    pdfT += [pdfTmp]
 
+# plt.axis('tight')
+pdf = np.asarray(pdfT)
+plt.plot(x, pdf, linewidth=2, color='r')
