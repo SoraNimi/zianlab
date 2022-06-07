@@ -3,8 +3,8 @@
 ** Design library name: reram
 ** Design cell name: XORNET4
 ** Design view name: schematic
-.PARAM blinresistor=59.5
-.PARAM blresistor=89
+.PARAM blinresistor=33
+.PARAM blresistor=49.4
 
 
 .TRAN 10e-12 200e-9 START=0.0
@@ -3121,7 +3121,7 @@
 .measure tran czabd AVG v(czabd) FROM = 99ns TO =100ns
 
 .INCLUDE "/home/user68/design/rules/rohm180/spice/hspice/bu40n1.mdl"
-.INCLUDE "/home/user68/DNN/insitu-training/20mv/bu40n3.mdl"
+.INCLUDE "/home/user68/DNN/offline-training/0mv/bu40n3.mdl"
 .LIB "/home/user68/design/rules/rohm180/spice/hspice/bu40n1.skw" NT
 .LIB "/home/user68/design/rules/rohm180/spice/hspice/bu40n1.skw" PT
 
