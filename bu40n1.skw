@@ -1,0 +1,138 @@
+* ***********************************************************
+* *                     ROHM SPICE MODEL                    *
+* ***********************************************************
+*
+*    PROCESS : BU40N1(0.18um CMOS)
+*    MODEL   : BSIM3v3.2(LEVEL53)
+*    VERSION : 1.0
+*    DATE    : 2003.4.8
+*    SPICE VERSION : HSPICE 98.2
+*        1) Please use bu40n1.mdl model
+
+****************************************
+*    BU40 3.3V Skew Model  2004/2/16   *
+****************************************
+.LIB HNT
+.PARAM mult1=1
++ toxhn= 6.6e-9
++ xlhn= 0
++ xwhn=0
++ rshhn= 0
++ delvtohn= 0
+.ENDL
+
+.LIB HNS
+.PARAM mult1=1
++ toxhn = 6.96e-9
++ xlhn =0.0312e-6 
++ xwhn =-0.03e-6
++ rshhn = 0
++ delvtohn = 75e-3
+.ENDL
+
+.LIB HNF
+.PARAM mult1=1
++ toxhn = 6.24e-9
++ xlhn =-0.0312e-6 
++ xwhn =0.03e-6
++ rshhn = 0
++ delvtohn = -75e-3
+.ENDL
+
+****************************************
+*   BU40 3.3V Skew Model   2004/2/16   *
+****************************************
+
+.LIB HPT
+.PARAM mult1=1
++ toxhp = 6.6e-9
++ xlhp = 0
++ xwhp =0
++ rshhp = 0
++ delvtohp = 0
+.ENDL
+
+.LIB HPS
+.PARAM mult1=1
++ toxhp = 6.96e-9
++ xlhp =0.0312e-6 
++ xwhp =-0.03e-6
++ rshhp = 0
++ delvtohp = -90e-3
+.ENDL
+
+.LIB HPF
+.PARAM mult1=1
++ toxhp = 6.24e-9
++ xlhp =-0.0312e-6 
++ xwhp =0.03e-6
++ rshhp = 0
++ delvtohp = 90e-3
+.ENDL
+
+****************************************
+*   BU40 1.8V Skew Model  2004/2/16    *
+****************************************
+.LIB NT
+.PARAM mult1=1
++ toxn = 3.2e-9
++ xln = 0
++ xwn =0
++ rshn = 0
++ delvtn = 0
+.ENDL
+
+.LIB NS
+.PARAM mult1=1
++ toxn = 3.37e-9
++ xln = 0.0201e-6
++ xwn = -0.03e-6
++ rshn = 0
++ delvtn = 0.050
+.ENDL
+
+.LIB NF
+.PARAM mult1=1
++ toxn = 3.03e-9
++ xln = -0.0201e-6
++ xwn = 0.03e-6
++ rshn = 0
++ delvtn = -0.050
+.ENDL
+
+****************************************
+*   BU40 1.8V Skew Model  2004/2/16    *
+****************************************
+
+.LIB PT
+.PARAM mult1=1
++ toxp = 3.2e-9
++ xlp = 0
++ xwp =0
++ rshp = 0
++ delvtp = 0
+.ENDL
+
+.LIB PS
+.PARAM mult1=1
++ toxp = 3.37e-9
++ xlp = 0.0201e-6
++ xwp = -0.03e-6
++ rshp = 0
++ delvtp = -0.065
+.ENDL
+
+.LIB PF
+.PARAM mult1=1
++ toxp = 3.03e-9
++ xlp = -0.0201e-6
++ xwp = 0.03e-6
++ rshp = 0
++ delvtp = 0.065
+.ENDL
+
+* 2003.4.8  3.3v Tr model released by Y.Takahashi
+* 2003.6.2  1.8v Tr model released by Y.Takahashi
+* 2003.10.2  1.8v 3.3v Tr model mod by Y.Takahashi
+* 2004.03.22  mod 1.8v Tr model by Y.Takahashi
+* 2004.11.25  mod 3.3v Tr model by Y.Takahashi
