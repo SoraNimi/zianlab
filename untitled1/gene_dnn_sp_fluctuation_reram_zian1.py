@@ -15,7 +15,7 @@ normal_std = np.sqrt(np.log(1 + (sigma / mu) ** 2))
 normal_mean = np.log(mu) - normal_std ** 2 / 2
 ls = np.random.lognormal(normal_mean, normal_std, 5000000)
 
-weight = np.load('weight_offline.npy', allow_pickle=True, encoding="latin1")
+weight = np.load('weight_m512xinco-25mv.npy', allow_pickle=True, encoding="latin1")
 neuron = []
 for i in range(len(weight)):
     print(weight[i])
