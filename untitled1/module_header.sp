@@ -3,8 +3,8 @@
 ** Design library name: reram
 ** Design cell name: XORNET4
 ** Design view name: schematic
-.PARAM blinresistor=33
-.PARAM blresistor=49.4
+.PARAM blinresistor=58.5
+.PARAM blresistor=89
 
 
 .TRAN 10e-12 200e-9 START=0.0
